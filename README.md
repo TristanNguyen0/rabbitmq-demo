@@ -5,7 +5,6 @@ This demo will be run on Windows using WSL, but the same commands can be followe
 1. WSL (Windows Subsystem for Linux)
 2. Docker
 3. Go
-4. Git
 
 ### Install WSL
 Open PowerShell as Admin: 
@@ -78,12 +77,6 @@ source ~/.bashrc
 Verify Installation:
 ```bash
 go version
-```
-
-### Install Git
-We will need to install Git to access the Go RabbitMQ Client Library
-```bash
-sudo apt install -y git
 ```
 
 ## Getting Started with RabbitMQ
