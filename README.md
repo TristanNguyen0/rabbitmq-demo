@@ -338,7 +338,7 @@ Ultimately, declaring a queue twice is safe.
 	)
 	failOnError(err, "Failed to declare queue")
 ```
-declaring the queue in both producer.go and consumer.go ensures
+declaring the queue in both producer.go and consumer.go ensures you can start either independently.
 
 
 ## Demonstrating guaranteed delivery
