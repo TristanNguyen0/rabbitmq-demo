@@ -170,7 +170,7 @@ err = ch.ExchangeDeclare(
 	false,           // auto-delete when unused
 	false,           // internal
 	false,           // no-wait
-	nil,             // additional arguments
+	nil,             // no additional arguments
 )
 failOnError(err, "Failed to declare exchange")
 
@@ -182,7 +182,7 @@ q, err := ch.QueueDeclare(
 	false,        // delete when unused
 	false,        // exclusive
 	false,        // no-wait
-	nil,          // arguments
+	nil,          // no additional arguments
 )
 failOnError(err, "Failed to declare queue")
 
@@ -192,8 +192,8 @@ err = ch.QueueBind(
 	q.Name,         // queue name
 	"demo-key",     // routing key
 	"demo-exchange", // exchange name
-	false,
-	nil,
+	false, // no-wait
+	nil, // no additional arguments
 )
 failOnError(err, "Failed to bind queue")
 ```
@@ -271,7 +271,7 @@ msgs, err := ch.Consume(
 	false,        // exclusive
 	false,        // no-local
 	false,        // no-wait
-	nil,          // arguments
+	nil,          // no additional arguments
 )
 failOnError(err, "Failed to register consumer")
 
@@ -287,7 +287,7 @@ for d := range msgs {
 	fmt.Printf("Received message: %s\n", d.Body)
 
 	// Simulate processing time
-	time.Sleep(2 * time.Second)
+	time.Sleep(5 * time.Second)
 
 	fmt.Println("Processing complete")
 
