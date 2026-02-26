@@ -1,5 +1,5 @@
 # RabbitMQ Live Demo
-This demo will be run on Windows using WSL, but the same commands can be followed on Linux directly, and on macOS with the only difference being that installations (such as Go, Git, and Docker) should be done using Homebrew.
+This demo will be run on Windows using WSL, but the same commands can be followed on Linux directly, and on macOS with the only difference being that installations (Go and Docker) should be done using Homebrew.
 
 ## Prerequisites
 1. WSL (Windows Subsystem for Linux)
